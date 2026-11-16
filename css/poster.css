@@ -13,7 +13,8 @@
 .sheet.letter{width:8.5in;height:11in}
 .sheet.a4{width:210mm;height:297mm}
 
-.p-top{display:flex;align-items:center;gap:.9rem;background:var(--navy);color:#fff;padding:.4in var(--pad) .35in;border-bottom:.09in solid var(--green)}
+.p-top{display:flex;align-items:center;gap:.9rem;background:var(--navy);color:#fff;padding:.4in var(--pad) .35in;border-bottom:0;position:relative}
+.p-top::after{content:"";position:absolute;left:0;right:0;bottom:-.09in;height:.09in;background:var(--weave);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .p-logo{width:.95in;height:.75in;font-size:.6rem;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#dfe5ee}
 .p-logo-img{height:1in;width:1in;object-fit:contain}
 .p-org{display:flex;flex-direction:column;line-height:1.15}
