@@ -64,6 +64,8 @@ window.SITE = {
 
   // Public report form (e.g. a public Survey123 link). No sign-in needed.
   reportUrl: "https://arcg.is/1HOL443",
+  // Website named on the poster for people who want to fill in the form later
+  posterWebsite: "tapestryresearchgroup.ca",
 
   // Staff tools. Each mode shows as a tab on its card. Add, remove or rename freely.
   services: [

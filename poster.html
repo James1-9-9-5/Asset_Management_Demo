@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/fonts.css?v=4">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css?v=17">
-  <link rel="stylesheet" href="css/poster.css?v=6">
-  <script src="js/config.js?v=14"></script>
+  <link rel="stylesheet" href="css/poster.css?v=7">
+  <script src="js/config.js?v=15"></script>
   <script src="js/brand.js?v=2"></script>
 </head>
 <body class="poster-page">
@@ -48,7 +48,7 @@
       <div class="p-scan">
         <span class="p-scan-tag">Scan to report</span>
         <p>Open your phone camera and point it at the code.</p>
-        <p class="p-url" id="p-url"></p>
+        <p class="p-later">Can’t do it right now? No worries, just head to <strong id="p-web">tapestryresearchgroup.ca</strong> later and you’ll find the form there.</p>
       </div>
     </section>
 
@@ -102,7 +102,8 @@
     qr.addData(target); qr.make();
     document.getElementById("qr").innerHTML = qr.createSvgTag({ cellSize: 8, margin: 0, scalable: true });
   } catch (e) { document.getElementById("qr").textContent = "QR code unavailable"; }
-  document.getElementById("p-url").textContent = target.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  // "Do it later" line: the website people can visit to find the form
+  if (S.posterWebsite) document.getElementById("p-web").textContent = S.posterWebsite.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   // Paper size
   var sheet = document.getElementById("sheet");

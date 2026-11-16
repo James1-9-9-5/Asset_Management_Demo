@@ -71,3 +71,7 @@
 .p-lockup{height:.95in;width:auto;display:block}
 .p-divider{width:1.5px;height:.6in;background:rgba(255,255,255,.3)}
 .p-site{font:600 16pt/1.2 var(--body);color:var(--green-light);letter-spacing:.02em}
+
+/* v7 'do it later' line under the QR instructions */
+.p-later{margin-top:.12in;font-size:10.5pt;line-height:1.45;color:var(--navy-soft)}
+.p-later strong{color:var(--green-ink);font-weight:600;white-space:nowrap}
