@@ -594,3 +594,10 @@ h1,h2,h3,.hero-full h1{font-weight:600}
   .brand-site{font-size:.82rem;white-space:normal;line-height:1.2;max-width:7.5em}
 }
 @media (max-width:380px){ .brand-divider,.brand-site{display:none} }
+/* ---- v16: larger header logo; site name in the poster's light green ---- */
+.header-inner{padding-top:.55rem;padding-bottom:.55rem}
+.brand-lockup{height:62px}
+.brand-divider{height:36px}
+.brand-site{color:var(--green-light);font-size:1rem}
+@media (max-width:640px){ .brand-lockup{height:44px} .brand-divider{height:26px} .brand-site{font-size:.85rem} }
+@media (max-width:440px){ .brand-divider,.brand-site{display:none} .brand-lockup{height:46px} }
