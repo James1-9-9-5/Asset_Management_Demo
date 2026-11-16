@@ -52,17 +52,6 @@
     root.setProperty("--green-glow", "rgba(" + deep.map(Math.round).join(",") + ",.35)");
   }
 
-  var warm = hex(B.warm);
-  if (warm) {
-    root.setProperty("--warm", toHex(until(warm, WHITE, 4.6, BLACK)));
-    root.setProperty("--warm-light", toHex(until(mix(warm, WHITE, 0.35), primary || [43, 46, 60], 4.6, WHITE)));
-  }
-  if (B.weave && B.weave.length) {
-    var cols = B.weave.map(hex).filter(Boolean), seg = 100 / cols.length, stops = [];
-    cols.forEach(function (c, i) { stops.push(toHex(c) + " " + (i * seg) + "% " + ((i + 1) * seg) + "%"); });
-    root.setProperty("--weave", "linear-gradient(90deg," + stops.join(",") + ")");
-  }
-
   // Photo focus points: centre each crop on the subject (set in config.js > photos)
   var P = (window.SITE && window.SITE.photos) || {};
   var rules = Object.keys(P).filter(function (k) { return P[k] && P[k].focus; }).map(function (k) {

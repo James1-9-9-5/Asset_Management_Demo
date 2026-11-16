@@ -15,12 +15,7 @@ window.SITE = {
   // Lighter and darker shades are worked out automatically, and text is kept readable.
   brand: {
     primary: "#2b2e3c",
-    accent: "#3a9fc4",
-    // Optional extras, taken from the logo:
-    // warm  = second highlight for small labels (kept readable on white automatically)
-    // weave = colours for the thin striped bar under the hero and poster header ("" turns it off)
-    warm: "#b8502e",
-    weave: ["#b8502e", "#3a9fc4", "#2f62b5", "#a3284f"]
+    accent: "#58aa4b"
   },
 
   // Logo: put the Nation's logo in /images and set its path here, e.g. "images/logo.png".

@@ -1,13 +1,11 @@
 /* Maintenance Management portal
-   Palette: Tapestry slate + turquoise, with rust and a four-colour weave bar from the rug logo. Set brand.primary and brand.accent in js/config.js to change it. */
+   Palette: Tapestry slate + green by default. Set brand.primary and brand.accent in js/config.js to change it. */
 :root{
   --navy:#2b2e3c; --navy-2:#383b48; --navy-soft:#4b4d59;
   /* Brand colours. These defaults are overwritten by brand.accent and brand.primary in js/config.js */
   --navy-hover:#404350;
-  --green:#3a9fc4; --green-deep:#2a7290; --green-hover:#25647f; --green-ink:#1e5168;
-  --green-tint:#e1f1f6; --green-mist:#f2f9fb; --green-line:#c9e4ee; --green-light:#a5d4e6; --green-glow:rgba(42,114,144,.35);
-  --warm:#b8502e; --warm-light:#e3906f;
-  --weave:linear-gradient(90deg,#b8502e 0 25%,#3a9fc4 25% 50%,#2f62b5 50% 75%,#a3284f 75% 100%);
+  --green:#58aa4b; --green-deep:#417d37; --green-hover:#396e30; --green-ink:#2f5c28;
+  --green-tint:#e6f2e4; --green-mist:#f3f9f2; --green-line:#d0e7cd; --green-light:#b4d9ae; --green-glow:rgba(65,125,55,.35);
   --bg:#f5f6f8; --surface:#ffffff; --ink:#1a1f2b; --muted:#5a6273; --line:#e3e7ed; --line-2:#d2d8e1;
   --info:#363946; --info-bg:#eff1f3; --info-line:#d9dce2;
   --amber:#8a5a00; --amber-bg:#fff4dc; --amber-line:#f0d08a;
@@ -603,11 +601,3 @@ h1,h2,h3,.hero-full h1{font-weight:600}
 .brand-site{color:var(--green-light);font-size:1rem}
 @media (max-width:640px){ .brand-lockup{height:44px} .brand-divider{height:26px} .brand-site{font-size:.85rem} }
 @media (max-width:440px){ .brand-divider,.brand-site{display:none} .brand-lockup{height:46px} }
-
-/* v18 rug palette: warm labels and the woven colour bar */
-.kicker,.contact-panel .kicker{color:var(--warm)}
-.hero-full{border-bottom:0}
-.hero-full::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--weave);z-index:3}
-.hero-full .ticker-label{color:var(--warm-light)}
-.site-footer{border-top:0;position:relative}
-.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--weave)}
