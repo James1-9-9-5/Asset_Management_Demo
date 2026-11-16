@@ -21,7 +21,10 @@ window.SITE = {
   // Logo: put the Nation's logo in /images and set its path here, e.g. "images/logo.png".
   // Leave as "" to show the "Nation's logo" placeholder.
   logo: "images/logo.png",
-  logoReverse: "images/logo-reverse.png",   // used on dark backgrounds (footer, poster header)
+  logoReverse: "images/logo-reverse.png",   // mark only, for dark backgrounds
+  // Full logo (mark + name), as used in the Survey123 header. Shown in the site header, footer and poster.
+  logoLockup: "images/logo-lockup.svg",
+  logoLockupReverse: "images/logo-lockup-reverse.svg",
 
   // DEMO MODE: shows a small "Demo site" tag in the footer. Set to false for a real community.
   demo: true,

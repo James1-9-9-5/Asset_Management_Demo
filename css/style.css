@@ -573,3 +573,24 @@ h1,h2,h3,.hero-full h1{font-weight:600}
 .nav-toggle{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 .site-header .logo-slot{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#c7cad3}
 @media (max-width:980px){ .nav{border-top:1px solid rgba(255,255,255,.1);margin-top:.6rem} }
+/* ---- v14: slightly shorter hero ---- */
+.hero-full{min-height:min(66vh,540px)}
+.hero-inner{padding-top:3rem;padding-bottom:2rem}
+@media (max-width:980px){ .hero-full{min-height:460px} }
+@media (max-width:640px){ .hero-full{min-height:0} .hero-inner{padding-top:2.5rem;padding-bottom:1.75rem} }
+
+/* ---- v15: one logo everywhere — the full Tapestry lockup, same artwork as the Survey123 header ---- */
+.brand{gap:1rem;align-items:center}
+.brand-lockup{height:52px;width:auto;display:block;flex:none}
+.brand-divider{width:1px;height:30px;background:rgba(255,255,255,.28);flex:none}
+.brand-site{font-family:var(--body);font-weight:600;font-size:.95rem;color:#d8dbe2;letter-spacing:.01em;white-space:nowrap}
+.footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;margin-bottom:1.1rem}
+.footer-lockup{height:52px;width:auto;display:block}
+.footer-site{font-family:var(--body);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green-light)}
+@media (max-width:640px){
+  .brand{gap:.7rem}
+  .brand-lockup{height:38px}
+  .brand-divider{height:24px}
+  .brand-site{font-size:.82rem;white-space:normal;line-height:1.2;max-width:7.5em}
+}
+@media (max-width:380px){ .brand-divider,.brand-site{display:none} }

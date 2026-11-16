@@ -56,6 +56,12 @@
     if (k === "manual") { if (H.manualUrl && H.manualUrl !== "#") { el.href = H.manualUrl; el.target = "_blank"; el.rel = "noopener"; } else { el.href = "#"; el.addEventListener("click", soon); } }
   });
 
+  // Full logo lockups (same artwork as the Survey123 header)
+  document.querySelectorAll("img[data-lockup]").forEach(function (img) {
+    var src = img.getAttribute("data-lockup") === "dark" ? S.logoLockupReverse : S.logoLockup;
+    if (src) img.src = src;
+  });
+
   // Hide optional bits that are empty in config.js
   document.querySelectorAll("[data-optional]").forEach(function (el) {
     var v = S[el.getAttribute("data-optional")];
