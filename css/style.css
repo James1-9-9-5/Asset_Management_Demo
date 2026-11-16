@@ -1,11 +1,13 @@
 /* Maintenance Management portal
-   Palette: Tapestry slate + green by default. Set brand.primary and brand.accent in js/config.js to change it. */
+   Palette: Tapestry slate + logo green, with logo blue for small labels and a striped bar in the logo colours. Set brand.primary and brand.accent in js/config.js to change it. */
 :root{
   --navy:#2b2e3c; --navy-2:#383b48; --navy-soft:#4b4d59;
   /* Brand colours. These defaults are overwritten by brand.accent and brand.primary in js/config.js */
   --navy-hover:#404350;
-  --green:#58aa4b; --green-deep:#417d37; --green-hover:#396e30; --green-ink:#2f5c28;
-  --green-tint:#e6f2e4; --green-mist:#f3f9f2; --green-line:#d0e7cd; --green-light:#b4d9ae; --green-glow:rgba(65,125,55,.35);
+  --green:#6fc27d; --green-deep:#2f7a3e; --green-hover:#5bb06a; --green-ink:#1d6b2e;
+  --green-tint:#e4f3e7; --green-mist:#f3faf4; --green-line:#cde9d3; --green-light:#a9dcb3; --green-glow:rgba(47,122,62,.35);
+  --warm:#2b6ec0; --warm-light:#9ccaf2;
+  --weave:linear-gradient(90deg,#1d6b2e 0 16.67%,#388c49 16.67% 33.33%,#6fc27d 33.33% 50%,#7bbcef 50% 66.67%,#2b6ec0 66.67% 83.33%,#1f5593 83.33% 100%);
   --bg:#f5f6f8; --surface:#ffffff; --ink:#1a1f2b; --muted:#5a6273; --line:#e3e7ed; --line-2:#d2d8e1;
   --info:#363946; --info-bg:#eff1f3; --info-line:#d9dce2;
   --amber:#8a5a00; --amber-bg:#fff4dc; --amber-line:#f0d08a;
@@ -601,3 +603,11 @@ h1,h2,h3,.hero-full h1{font-weight:600}
 .brand-site{color:var(--green-light);font-size:1rem}
 @media (max-width:640px){ .brand-lockup{height:44px} .brand-divider{height:26px} .brand-site{font-size:.85rem} }
 @media (max-width:440px){ .brand-divider,.brand-site{display:none} .brand-lockup{height:46px} }
+
+/* v18 logo palette: blue labels and the woven colour bar (colours from the logo's stripes) */
+.kicker,.contact-panel .kicker{color:var(--warm)}
+.hero-full{border-bottom:0}
+.hero-full::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--weave);z-index:3}
+.hero-full .ticker-label{color:var(--warm-light)}
+.site-footer{border-top:0;position:relative}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--weave)}
