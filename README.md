@@ -28,7 +28,7 @@ This copy is set up as a demo branded for **Tapestry Research Group**, with a sm
 
    Links left as `#` show "Link coming soon" when clicked.
 2. **Images** in `images/` (keep the same file names, or update them in the HTML):
-   - **Logo:** `images/logo.png` (square PNG with a transparent background, 512×512). The demo uses the Tapestry logo. Set `logo: ""` in `config.js` to show the "Nation's logo" placeholder instead.
+   - **Logo:** `images/logo.png` (square PNG with a transparent background, 512×512). The demo uses the Tapestry woven mark (`logo.png`), with `logo-reverse.png` for dark backgrounds (footer, poster). Set `logo: ""` in `config.js` to show the "Nation's logo" placeholder instead.
    - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` and the `icon-*.png` app icons are made from the demo badge. Replace them with versions of the Nation's logo.
    - `hero-1.jpg` to `hero-5.jpg`: home slideshow (1200 wide, landscape). Only the first loads straight away; each of the others loads just before it's shown. File names must be lowercase: GitHub Pages treats `Hero-1.jpg` and `hero-1.jpg` as different files.
    - `community.jpg` and `staff.jpg`: home card photos (1200 wide)
@@ -41,7 +41,7 @@ This copy is set up as a demo branded for **Tapestry Research Group**, with a sm
 5. **Colours** are at the top of `css/style.css` (`--navy`, `--green` and so on). Text colours have been checked against WCAG AA contrast.
 
 ## Fonts
-Archivo (headings), IBM Plex Sans (text) and IBM Plex Mono (labels, phone numbers, photo captions) are stored in `/fonts`, so no Google Fonts connection is needed. All three use the SIL Open Font License, and the licence files are in the same folder.
+Source Serif 4 (headings, SemiBold) and Source Sans 3 (text and labels), matching the Tapestry brand sheet, are stored in `/fonts`, so no Google Fonts connection is needed. All use the SIL Open Font License, and the licence files are in the same folder.
 
 ## Install to phone
 The site is a Progressive Web App. On a phone, open the site and choose **Add to Home Screen** (Safari share menu on iPhone, or the ⋮ menu → **Install app** on Android). It then opens full-screen like an app, and if there's no signal it shows `offline.html` with the phone numbers. This only works on the live https site, not when opening the files locally.

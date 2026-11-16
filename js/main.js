@@ -28,7 +28,8 @@
   // Logo: swap the placeholder for the real logo when one is set
   if (S.logo) document.querySelectorAll("[data-logo]").forEach(function (el) {
     var img = new Image();
-    img.src = S.logo; img.alt = ""; img.className = "logo-img" + (el.classList.contains("sm") ? " sm" : "");
+    var dark = el.classList.contains("sm") || !!el.closest(".site-header");
+    img.src = (dark && S.logoReverse) ? S.logoReverse : S.logo; img.alt = ""; img.className = "logo-img" + (el.classList.contains("sm") ? " sm" : "");
     el.replaceWith(img);
   });
 

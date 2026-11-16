@@ -21,6 +21,7 @@ window.SITE = {
   // Logo: put the Nation's logo in /images and set its path here, e.g. "images/logo.png".
   // Leave as "" to show the "Nation's logo" placeholder.
   logo: "images/logo.png",
+  logoReverse: "images/logo-reverse.png",   // used on dark backgrounds (footer, poster header)
 
   // DEMO MODE: shows a small "Demo site" tag in the footer. Set to false for a real community.
   demo: true,

@@ -10,9 +10,9 @@
   --info:#363946; --info-bg:#eff1f3; --info-line:#d9dce2;
   --amber:#8a5a00; --amber-bg:#fff4dc; --amber-line:#f0d08a;
   --red:#a33a1c; --red-bg:#fcebe5; --red-line:#efbfae;
-  --head:"Archivo","Arial Narrow",system-ui,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --head:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Source Sans 3",system-ui,sans-serif;
   --r:14px; --r-sm:8px;
   --shadow:0 1px 2px rgba(27,30,39,.04),0 6px 20px rgba(27,30,39,.06);
   --shadow-lift:0 2px 6px rgba(27,30,39,.06),0 18px 40px rgba(27,30,39,.12);
@@ -388,7 +388,7 @@ p,li,.lead{text-wrap:pretty}
 .more:hover .icon{transform:translateX(3px)}
 .contact-panel .kicker{color:var(--green-deep)}
 
-/* ---- Typography v9: Archivo headings, IBM Plex Sans text, IBM Plex Mono labels and numbers ---- */
+/* ---- Typography v9 (label sizing) ---- */
 h1,h2,h3{font-stretch:112%;font-weight:750;letter-spacing:-.015em}
 h1{font-weight:800;letter-spacing:-.025em;line-height:1.04}
 .hero h1{font-size:clamp(2.3rem,4.3vw,3.5rem)}
@@ -537,3 +537,39 @@ main > section.contact-section:last-child{margin-bottom:0}
 .call > span:last-child{min-width:0}
 .call b,.mail-text{overflow-wrap:anywhere}
 .footer-contact a{min-width:0}
+
+/* ---- Typography v11: Tapestry fonts (Source Serif 4 headings, Source Sans 3 text) ---- */
+h1,h2,h3,.brand-text strong,.footer-brand strong,.season h3{font-stretch:normal;letter-spacing:-.01em}
+h1,h2,h3{font-weight:600;font-optical-sizing:auto}
+h1{font-weight:650;letter-spacing:-.02em;line-height:1.08}
+.hero-full h1{font-weight:650;line-height:1.04}
+.brand-text strong{font-weight:600;font-size:1.25rem;letter-spacing:0}
+.footer-brand strong{font-weight:600}
+body{font-size:1.09rem}
+h1,.hero-full h1{font-weight:700}
+
+/* ---- v12: match the Tapestry brand sheet — Source Serif 4 SemiBold headings, Source Sans 3 everywhere else ---- */
+:root{--mono:"Source Sans 3",system-ui,sans-serif}
+h1,h2,h3,.hero-full h1{font-weight:600}
+.kicker,.ticker-label,.site-footer h2,.now-tag,.pill,.p-scan-tag,.p-call small,.call small{font-weight:600;letter-spacing:.14em}
+.call b,.tel-num{font-family:var(--body);font-weight:600;letter-spacing:0;font-variant-numeric:tabular-nums lining-nums}
+.steps li::before{font-family:var(--head);font-weight:600;font-size:1.35rem;letter-spacing:0}
+.photo-cap,.demo-tag{font-family:var(--body);letter-spacing:.08em}
+.hero-meta li{font-family:var(--body)}
+/* the woven mark sits directly on the slate footer (reverse version), no white tile */
+.logo-img{height:48px;width:48px;border-radius:0}
+.logo-img.sm{background:none;padding:0;border-radius:0;height:46px;width:46px}
+
+/* ---- v13: slate header with the white-bordered logo ---- */
+.site-header{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:none}
+.brand{color:#fff}
+.brand-text strong{color:#fff}
+.brand-text small{color:#c7cad3}
+.nav a{color:#d8dbe2}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav a[aria-current="page"]{color:#fff;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.nav .nav-report{background:var(--green);color:var(--ink)}
+.nav .nav-report:hover{background:var(--green-light);color:var(--ink)}
+.nav-toggle{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.site-header .logo-slot{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#c7cad3}
+@media (max-width:980px){ .nav{border-top:1px solid rgba(255,255,255,.1);margin-top:.6rem} }
