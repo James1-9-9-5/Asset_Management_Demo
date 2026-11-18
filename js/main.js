@@ -41,6 +41,19 @@
   });
 
   // Demo tag
+  // Demo bar: links visitors back to the Tapestry website
+  if (S.demo && S.demoBar && !document.querySelector(".demo-bar")) {
+    var B = S.demoBar, bar = document.createElement("div");
+    bar.className = "demo-bar";
+    bar.innerHTML = '<div class="wrap"><span class="demo-bar-text"><span class="demo-pill">Demo</span><span></span></span><span class="demo-bar-links"></span></div>';
+    bar.querySelector(".demo-bar-text span:last-child").textContent = B.text || "";
+    var links = bar.querySelector(".demo-bar-links");
+    if (B.walkthroughUrl) { var w = document.createElement("a"); w.className = "demo-walk"; w.href = B.walkthroughUrl; w.textContent = B.walkthroughLabel || "Book a walkthrough"; links.appendChild(w); }
+    if (B.backUrl) { var k = document.createElement("a"); k.className = "demo-back"; k.href = B.backUrl; k.innerHTML = '<svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'; k.appendChild(document.createTextNode(B.backLabel || "Back")); links.appendChild(k); }
+    var skip = document.querySelector(".skip");
+    if (skip) skip.after(bar); else document.body.prepend(bar);
+  }
+  if (S.demo && S.demoSigninNote) document.querySelectorAll(".signin-note > span").forEach(function (el) { el.textContent = S.demoSigninNote; });
   if (S.demo) document.querySelectorAll(".footer-base").forEach(function (fb) {
     var t = document.createElement("span");
     t.className = "demo-tag"; t.title = S.demoNote || ""; t.textContent = "Demo site";

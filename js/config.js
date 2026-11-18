@@ -34,6 +34,16 @@ window.SITE = {
   // DEMO MODE: shows a small "Demo site" tag in the footer. Set to false for a real community.
   demo: true,
   demoNote: "Demonstration copy of the maintenance portal by Tapestry Research Group.",
+  // Strip across the top of every page in demo mode, linking visitors back to the Tapestry website.
+  demoBar: {
+    text: "You're viewing a sample portal built by Tapestry Research Group. All data is fictional.",
+    backLabel: "Back to Tapestry",
+    backUrl: "https://tapestry.jamesspooner.org/services.html",
+    walkthroughLabel: "Book a walkthrough",
+    walkthroughUrl: "https://tapestry.jamesspooner.org/contact.html"
+  },
+  // In demo mode this replaces the sign-in note on the Staff page.
+  demoSigninNote: "This is a demo with sample data. Some tools may ask you to sign in. If you can't get in, book a walkthrough and we'll show you around.",
 
   // Optional greeting in the Nation's language, shown above the home headline.
   // Leave as "" to hide it.

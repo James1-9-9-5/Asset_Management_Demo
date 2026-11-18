@@ -36,7 +36,7 @@ This copy is set up as a demo branded for **Tapestry Research Group**, with a sm
    - `og.png`: the preview image when the link is shared (1200×630)
 
    Keep photos under about 250 KB each so the site loads quickly on slower connections.
-3. **Your web address:** the link-preview tags (`og:image`, `og:url`) in each HTML file use `https://demo.jamesspooner.org`. Change this to the Nation's domain when you set up a new copy, or link previews won't show the image.
+3. **Your web address:** the link-preview tags (`og:image`, `og:url`) in each HTML file use `https://demo.tapestryresearchgroup.ca`. Change this to the Nation's domain when you set up a new copy, or link previews won't show the image.
 4. **Page titles:** the `<title>` and description tags at the top of each HTML file contain `[Community Name]` and `[Nation Name]`. Replace them by hand so search engines and link previews show the real names.
 5. **Colours** are at the top of `css/style.css` (`--navy`, `--green` and so on). Text colours have been checked against WCAG AA contrast.
 

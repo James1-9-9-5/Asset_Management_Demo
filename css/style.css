@@ -617,3 +617,15 @@ h1,h2,h3,.hero-full h1{font-weight:600}
 .hero-full .ticker-label{color:var(--warm-light)}
 .site-footer{border-top:0;position:relative}
 .site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--weave)}
+
+/* Demo bar (demo mode only): links back to the Tapestry website */
+.demo-bar{background:#1f2129;color:#c9cdd8;font-size:.9rem;line-height:1.3;border-bottom:1px solid #3a3e4e}
+.demo-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:.5rem 1.25rem;flex-wrap:wrap;padding-top:.55rem;padding-bottom:.55rem}
+.demo-bar-text{display:flex;align-items:center;gap:.6rem}
+.demo-pill{flex:none;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--green,#6fc27d);color:#1f2129;padding:.2rem .5rem;border-radius:999px}
+.demo-bar-links{display:flex;gap:1.1rem;white-space:nowrap}
+.demo-bar a{text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:.3rem}
+.demo-walk{color:#6fc27d}
+.demo-back{color:#fff}
+.demo-bar a:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:640px){.demo-bar-text span:last-child{display:none}.demo-bar .wrap{flex-wrap:nowrap}}
