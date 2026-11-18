@@ -73,6 +73,8 @@ window.SITE = {
   posterWebsite: "tapestryresearchgroup.ca",
 
   // Staff tools. Each mode shows as a tab on its card. Add, remove or rename freely.
+  // disabled: true greys out a tab so it can't be selected. Put it on a whole service
+  // to grey out every tab on that card (and its Open button), or on a single mode.
   services: [
     {
       id: "general",
@@ -81,13 +83,14 @@ window.SITE = {
       blurb: "Work orders, assignments and progress for buildings, grounds and community assets.",
       modes: [
         { label: "Dashboard", text: "Live map and charts of open and closed work orders.", url: "https://www.arcgis.com/apps/dashboards/f437016e537040fda841f3f61f1c6580" },
-        { label: "Survey", text: "Log a new deficiency or update a work order in the field.", url: "#" },
-        { label: "Report", text: "Printable summary of work completed this period.", url: "#" },
-        { label: "Dataset", text: "The underlying records, for filtering and export.", url: "#" }
+        { label: "Survey", text: "Log a new deficiency or update a work order in the field.", url: "https://arcg.is/0jOPW84" },
+        { label: "Report", text: "Printable summary of work completed this period.", url: "https://survey123.arcgis.com/surveys/6448d20153f14c0682669d0fd2a87d72/data?extent=-123.1752,49.2568,-123.0350,49.2766" },
+        { label: "Dataset", text: "The underlying records, for filtering and export.", url: "https://ejsa.maps.arcgis.com/home/item.html?id=6be2e322a7794765810ca196263b76f6&dataTabView=table#data" }
       ]
     },
     {
       id: "housing",
+      disabled: true,          // greyed out until the links are ready
       icon: "house",           // wrench, house, lifebuoy, box, book, truck, water, bolt or tree
       title: "Housing Maintenance",
       blurb: "House condition, inspection status and housing work orders in one view.",
@@ -101,6 +104,7 @@ window.SITE = {
     },
     {
       id: "inventory",
+      disabled: true,          // greyed out until the links are ready
       icon: "box",           // wrench, house, lifebuoy, box, book, truck, water, bolt or tree
       title: "Inventory Tracker",
       blurb: "Parts, materials and tools: what is on hand and what has moved.",
@@ -113,6 +117,7 @@ window.SITE = {
     },
     {
       id: "modules",
+      disabled: true,          // greyed out until the links are ready
       icon: "book",           // wrench, house, lifebuoy, box, book, truck, water, bolt or tree
       title: "Modules",
       blurb: "Reference modules for the maintenance system: how it works, how to use it, and how work is planned and reviewed.",

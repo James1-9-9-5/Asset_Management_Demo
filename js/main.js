@@ -242,8 +242,14 @@
       var card = document.createElement("article");
       card.className = "tool-card reveal";
       card.id = svc.id;
+      var off = function (m) { return !!(svc.disabled || m.disabled); };
+      var first = -1;
+      svc.modes.forEach(function (m, i) { if (first < 0 && !off(m)) first = i; });
+      if (first < 0) card.classList.add("is-disabled");
       var tabs = svc.modes.map(function (m, i) {
-        return '<button role="tab" aria-selected="' + (i === 0) + '" data-i="' + i + '">' + m.label + "</button>";
+        return off(m)
+          ? '<button role="tab" aria-selected="false" aria-disabled="true" disabled tabindex="-1" title="Coming soon" data-i="' + i + '">' + m.label + "</button>"
+          : '<button role="tab" aria-selected="' + (i === first) + '" data-i="' + i + '">' + m.label + "</button>";
       }).join("");
       card.innerHTML =
         '<header class="tool-head"><span class="svc-icon">' + svg(svc.icon || "wrench", 28) + '</span><span class="lock" title="Sign-in required">' + lock + "</span>" +
@@ -253,7 +259,7 @@
       var panel = card.querySelector(".tool-panel");
       function select(i) {
         var m = svc.modes[i];
-        card.querySelectorAll("[role=tab]").forEach(function (b, j) { b.setAttribute("aria-selected", i === j); });
+        card.querySelectorAll("[role=tab]").forEach(function (b, j) { if (!b.disabled) b.setAttribute("aria-selected", i === j); });
         panel.querySelector(".icon-badge").innerHTML = svg(m.icon || m.label, 24);
         panel.querySelector("strong").textContent = m.title || ("Open " + m.label.toLowerCase());
         panel.querySelector(".tool-copy span").textContent = m.text;
@@ -262,12 +268,21 @@
         panel.target = real ? "_blank" : "";
         panel.rel = real ? "noopener" : "";
         panel.dataset.ready = real ? "1" : "";
+        if (off(m)) {
+          panel.classList.add("is-disabled");
+          panel.removeAttribute("href"); panel.removeAttribute("target");
+          panel.setAttribute("aria-disabled", "true"); panel.setAttribute("tabindex", "-1");
+          panel.dataset.ready = "";
+        }
       }
-      panel.addEventListener("click", function (e) { if (!panel.dataset.ready) soon(e); });
-      card.querySelectorAll("[role=tab]").forEach(function (b) {
+      panel.addEventListener("click", function (e) {
+        if (panel.classList.contains("is-disabled")) { e.preventDefault(); return; }
+        if (!panel.dataset.ready) soon(e);
+      });
+      card.querySelectorAll("[role=tab]:not([disabled])").forEach(function (b) {
         b.addEventListener("click", function () { select(+b.dataset.i); });
       });
-      select(0);
+      select(first < 0 ? 0 : first);
       grid.appendChild(card);
     });
     var jump = document.getElementById("service-jump");

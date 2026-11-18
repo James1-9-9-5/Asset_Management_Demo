@@ -195,6 +195,12 @@ a:has(.soon){position:relative}
 .tool-copy span{display:block;color:var(--muted);font-size:.96rem;line-height:1.45}
 .go{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;flex:none;transition:transform .15s}
 .tool-panel:hover .go{transform:translateX(3px)}
+.tool-tabs button:disabled,.tool-tabs button:disabled:hover{color:var(--muted);background:var(--bg);border-color:var(--line);opacity:.55;cursor:not-allowed}
+.tool-panel.is-disabled{cursor:not-allowed;opacity:.5;filter:grayscale(1)}
+.tool-panel.is-disabled:hover{background:var(--bg)}
+.tool-panel.is-disabled:hover .go{transform:none}
+.tool-panel.is-disabled .go{background:var(--muted)}
+.tool-card.is-disabled .svc-icon{filter:grayscale(1);opacity:.6}
 
 /* Community */
 .report-panel{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:start}
