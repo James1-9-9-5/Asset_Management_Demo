@@ -69,6 +69,8 @@
     if (k === "manual") { if (H.manualUrl && H.manualUrl !== "#") { el.href = H.manualUrl; el.target = "_blank"; el.rel = "noopener"; } else { el.href = "#"; el.addEventListener("click", soon); } }
   });
 
+  // Header mark (logo only, for the dark header)
+  if (S.logoReverse) document.querySelectorAll("img.brand-mark").forEach(function (img) { img.src = S.logoReverse; });
   // Full logo lockups (same artwork as the Survey123 header)
   document.querySelectorAll("img[data-lockup]").forEach(function (img) {
     var src = img.getAttribute("data-lockup") === "dark" ? S.logoLockupReverse : S.logoLockup;
@@ -140,7 +142,7 @@
   var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Hero slideshow: first photo loads straight away, the rest after the page has loaded
-  var photo = document.querySelector(".hero-full, .hero-photo");
+  var photo = document.querySelector(".hero-banner, .hero-full, .hero-photo");
   var slides = photo ? photo.querySelectorAll(".slide") : [];
   if (slides.length) {
     var si = 0, userPaused = still, hover = false;

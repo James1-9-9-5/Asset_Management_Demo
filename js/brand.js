@@ -52,6 +52,11 @@
     root.setProperty("--green-glow", "rgba(" + deep.map(Math.round).join(",") + ",.35)");
   }
 
+  // Optional extra greens: wash = colour over banner photos, light = labels on dark backgrounds
+  var wash = hex(B.wash), light = hex(B.light);
+  if (wash) root.setProperty("--wash-base", toHex(wash));
+  if (light) root.setProperty("--green-light", toHex(light));
+
   var warm = hex(B.warm);
   if (warm) {
     root.setProperty("--warm", toHex(until(warm, WHITE, 4.6, BLACK)));

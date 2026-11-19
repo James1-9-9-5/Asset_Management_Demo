@@ -629,3 +629,127 @@ h1,h2,h3,.hero-full h1{font-weight:600}
 .demo-back{color:#fff}
 .demo-bar a:hover{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:640px){.demo-bar-text span:last-child{display:none}.demo-bar .wrap{flex-wrap:nowrap}}
+/* ---- v19: product look. The portal reads as a Tapestry product rather than a second Tapestry website:
+   product name in the header, logo blue as the main colour (set by brand.accent in config.js),
+   sans-serif headings, a contained photo banner with overlapping tiles. ---- */
+:root{
+  --bg:#f2f4f7;
+  --wash-1:color-mix(in srgb,var(--green-deep) 95%,transparent);
+  --wash-2:color-mix(in srgb,var(--green-deep) 80%,transparent);
+}
+h1,h2,h3{font-family:var(--body);font-weight:700;letter-spacing:-.015em}
+h1{letter-spacing:-.02em}
+.steps li::before{font-family:var(--body);font-weight:700}
+.poster-promo strong{font-family:var(--body)}
+
+/* Header: product name leads, the company sits underneath */
+.site-header{border-bottom:0}
+.site-header::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:5px;background:var(--weave);pointer-events:none}
+.brand{gap:.75rem}
+.brand-mark{width:44px;height:44px;flex:none;display:block}
+.brand-name{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.brand-name strong{font-family:var(--head);font-weight:600;font-size:1.32rem;color:#fff;letter-spacing:-.01em;white-space:nowrap}
+.brand-name small{font-size:.8rem;color:#aab1c0;margin-top:3px;letter-spacing:.01em;white-space:nowrap}
+.nav .nav-report{background:var(--green-deep);color:#fff}
+.nav .nav-report:hover{background:var(--green-hover);color:#fff}
+.demo-pill{background:#6fc27d}
+@media (max-width:640px){
+  .brand-mark{width:38px;height:38px}
+  .brand-name strong{font-size:1.1rem}
+  .brand-name small{font-size:.74rem}
+}
+@media (max-width:380px){ .brand-name small{display:none} }
+
+/* Home: contained photo banner with tiles overlapping its bottom edge */
+.home-top{padding:1.75rem 0 2.75rem}
+.hero-banner{position:relative;isolation:isolate;display:flex;align-items:center;min-height:380px;border-radius:18px;overflow:hidden;background:var(--navy);color:#fff}
+.hero-banner .hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-banner .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,34,.35) 0,transparent 55%),linear-gradient(90deg,var(--wash-1) 0,var(--wash-2) 38%,transparent 74%)}
+.hero-copy{position:relative;padding:3rem 3.25rem 5.5rem;max-width:42rem}
+.hero-banner .greeting{color:#fff;margin:0 0 .3rem}
+.hero-banner .kicker{color:var(--green-light);margin-bottom:.7rem}
+.hero-banner h1{color:#fff;font-size:clamp(2.1rem,4vw,2.9rem);line-height:1.06;margin:0 0 .45em;text-wrap:balance}
+.hero-banner .lead{color:rgba(255,255,255,.9);font-size:1.15rem;line-height:1.5;margin:0;max-width:34em}
+.hero-banner .photo-cap{position:absolute;right:1rem;top:1rem;z-index:2;display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.92);padding:.3rem .65rem;border-radius:999px;color:var(--navy)}
+.hero-banner .photo-cap:empty{display:none}
+.hero-tiles{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:-3.5rem 2.25rem 0}
+.hero-tile{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.4rem 1.25rem;text-decoration:none;color:var(--ink);box-shadow:0 14px 30px -14px rgba(26,31,43,.35);transition:transform .2s,box-shadow .2s}
+.hero-tile:hover{transform:translateY(-3px);box-shadow:0 20px 36px -16px rgba(26,31,43,.45)}
+.tile-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:10px;background:var(--green-tint);color:var(--green-deep);flex:none}
+.hero-tile h2{font-size:1.25rem;margin:.9rem 0 .2rem;color:var(--navy)}
+.hero-tile p{color:var(--muted);font-size:1rem;margin:0 0 1rem}
+.tile-go{margin-top:auto;display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--green-deep)}
+.tile-go .icon{transition:transform .15s}
+.hero-tile:hover .tile-go .icon{transform:translateX(3px)}
+.hero-tile.primary{background:var(--green-deep);border-color:transparent;color:#fff}
+.hero-tile.primary .tile-ic{background:rgba(255,255,255,.16);color:#fff}
+.hero-tile.primary h2,.hero-tile.primary .tile-go{color:#fff}
+.hero-tile.primary p{color:rgba(255,255,255,.86)}
+.tip-strip{display:flex;align-items:center;gap:1rem;margin-top:1.5rem;background:#fff;border:1px solid var(--line);border-radius:10px;padding:.75rem 1rem .75rem 1.1rem}
+.tip-strip .ticker-label{color:var(--warm)}
+.tip-strip .ticker-text{flex:1;min-width:0;color:var(--ink);font-weight:500}
+.tip-strip .ticker-pause{margin-left:auto;background:var(--bg);color:var(--navy)}
+.tip-strip .ticker-pause:hover{background:var(--line)}
+
+/* Staff and Community: the same contained banner, shorter */
+.page-head{background:none;border:0;padding-top:1.75rem}
+.page-head .wrap{position:relative;isolation:isolate;display:flex;align-items:center;max-width:calc(1200px - 3rem);width:calc(100% - 3rem);min-height:240px;padding:2.75rem 3.25rem;border-radius:18px;overflow:hidden;background:var(--navy)}
+.page-head .page-photo{position:absolute!important;inset:0;z-index:-1;display:block!important;margin:0;border-radius:0;aspect-ratio:auto}
+.page-head .page-photo img{width:100%;height:100%;object-fit:cover}
+.page-head .page-photo::before{inset:0;height:auto;background:linear-gradient(90deg,rgba(10,18,34,.35) 0,transparent 55%),linear-gradient(90deg,var(--wash-1) 0,var(--wash-2) 42%,transparent 82%)}
+.page-head .page-photo::after{display:none}
+.page-head .page-photo .photo-cap{left:auto;right:1rem;top:1rem;bottom:auto}
+.page-head .kicker{color:var(--green-light)}
+.page-head h1{color:#fff;margin-bottom:.3em}
+.page-head .lead{color:rgba(255,255,255,.9);max-width:34em}
+
+@media (max-width:980px){
+  .hero-tiles{margin:-3rem 1.25rem 0}
+}
+@media (max-width:760px){
+  .hero-tiles{grid-template-columns:1fr;margin:-2.5rem .75rem 0}
+}
+@media (max-width:640px){
+  .home-top{padding:1rem 0 2rem}
+  .hero-banner{min-height:0;border-radius:14px}
+  .hero-copy{padding:2rem 1.5rem 4rem}
+  .hero-banner .hero-bg::after{background:linear-gradient(90deg,var(--wash-1) 0,var(--wash-2) 60%,color-mix(in srgb,var(--green-deep) 45%,transparent) 100%)}
+  .hero-banner .photo-cap{display:none}
+  .page-head{padding-top:1rem}
+  .page-head .wrap{width:calc(100% - 1.5rem);padding:2rem 1.5rem;min-height:0;border-radius:14px}
+  .page-head .page-photo::before{background:linear-gradient(90deg,var(--wash-1) 0,var(--wash-2) 60%,color-mix(in srgb,var(--green-deep) 45%,transparent) 100%)}
+  .page-head .page-photo .photo-cap{display:none}
+  .tip-strip{flex-wrap:wrap;gap:.35rem .8rem}
+  .tip-strip .ticker-text{flex-basis:100%;order:3}
+}
+@media print{
+  .hero-banner,.page-head .wrap{background:none;color:#000;min-height:0}
+  .hero-bg,.page-head .page-photo,.hero-tiles,.tip-strip{display:none!important}
+  .hero-banner h1,.page-head h1{color:#000}
+  .hero-banner .lead,.page-head .lead{color:#333}
+}
+@media (max-width:640px){
+  .header-inner{column-gap:.6rem}
+  .brand{gap:.6rem;min-width:0}
+  .brand-mark{width:34px;height:34px}
+  .brand-name strong{font-size:1rem;white-space:normal;line-height:1.1}
+  .brand-name small{font-size:.7rem;white-space:normal}
+  .nav-toggle{padding:.4rem .65rem}
+}
+/* ---- v20: three logo greens. Dark (accent) for actions, middle (brand.wash) over the photos, light (brand.light) for labels on dark ---- */
+:root{
+  --wash-1:color-mix(in srgb,var(--wash-base,var(--green-deep)) 95%,transparent);
+  --wash-2:color-mix(in srgb,var(--wash-base,var(--green-deep)) 80%,transparent);
+}
+.hero-banner .kicker,.page-head .kicker{display:inline-block;background:var(--green-light);color:#10301a;padding:.28rem .7rem;border-radius:999px;font-size:.74rem;margin-bottom:.9rem}
+.nav a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--green-light);background:rgba(255,255,255,.08)}
+.tile-ic{background:var(--green-tint)}
+.hero-tile:hover{border-color:var(--green-light)}
+.hero-tile.primary:hover{border-color:transparent}
+.tip-strip{border-left:4px solid var(--green-light)}
+.tip-strip .ticker-label{color:var(--green-deep)}
+.tip-strip .ticker-label .icon{color:var(--green-light)}
+.site-footer h2,.footer-site{color:var(--green-light)}
+@media (max-width:640px){
+  .hero-banner .hero-bg::after,.page-head .page-photo::before{background:linear-gradient(90deg,var(--wash-1) 0,var(--wash-2) 60%,color-mix(in srgb,var(--wash-base,var(--green-deep)) 45%,transparent) 100%)}
+}

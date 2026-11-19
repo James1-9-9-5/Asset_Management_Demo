@@ -21,9 +21,9 @@
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Maintenance">
-  <link rel="stylesheet" href="css/style.css?v=20">
-  <script src="js/config.js?v=19"></script>
-  <script src="js/brand.js?v=3"></script>
+  <link rel="stylesheet" href="css/style.css?v=22">
+  <script src="js/config.js?v=23"></script>
+  <script src="js/brand.js?v=4"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,7 +32,7 @@
 </div>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="index.html" aria-label="Tapestry Research Group, Maintenance Management home"><img class="brand-lockup" data-lockup="dark" src="images/logo-lockup-reverse.svg" alt="Tapestry Research Group" width="160" height="48"><span class="brand-divider" aria-hidden="true"></span><span class="brand-site" data-site="siteName">Maintenance Management</span></a>
+    <a class="brand" href="index.html" aria-label="Maintenance Management home"><img class="brand-mark" src="images/logo-reverse.png" alt="" width="44" height="44"><span class="brand-name"><strong data-site="siteName">Maintenance Management</strong><small data-site="byline">by Tapestry Research Group</small></span></a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="index.html" aria-current="page">Home</a><a href="staff.html">Staff</a><a href="community.html">Community</a>
       <a class="nav-report" href="community.html">Report a problem</a>
@@ -41,47 +41,24 @@
   </div>
 </header>
 <main id="main">
-<section class="hero-full">
-  <div class="hero-bg" aria-hidden="true"><img class="slide" data-photo="hero-1" src="images/hero-1.jpg" alt="" width="1200" height="800" fetchpriority="high"><img class="slide" data-photo="hero-2" data-src="images/hero-2.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-3" data-src="images/hero-3.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-4" data-src="images/hero-4.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-5" data-src="images/hero-5.jpg" alt="" width="1200" height="800"></div>
-  <div class="wrap hero-inner">
-    <p class="greeting" data-site="greeting" data-optional="greeting"></p>
-    <h1><span data-site="community">Tapestry</span> <span class="accent" data-site="siteName">Maintenance Management</span></h1>
-    <p class="lead">Report a problem, or open the dashboards, surveys and records the Maintenance Office uses to look after the community's homes, buildings and equipment.</p>
-    <div class="hero-actions">
-      <a class="btn btn-lg btn-hero" href="community.html">Report a problem <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-lg btn-ghost" href="staff.html"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Staff tools</a>
-    </div>
-  </div>
-  <div class="wrap hero-foot">
-    <div class="ticker"><span class="ticker-label"><svg class="icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg><span class="lbl">Safety tip</span></span><span class="ticker-text"></span><button class="ticker-pause" type="button"></button></div>
-  </div>
-</section>
-
-<section class="section">
+<section class="home-top">
   <div class="wrap">
-    <div class="section-head">
-      <p class="kicker">Where to start</p>
-      <h2>How can we help?</h2>
-      <p>Community members can report a problem without signing in. Staff sign in to manage the work.</p>
+    <div class="hero-banner">
+      <div class="hero-bg" aria-hidden="true"><img class="slide" data-photo="hero-1" src="images/hero-1.jpg" alt="" width="1200" height="800" fetchpriority="high"><img class="slide" data-photo="hero-2" data-src="images/hero-2.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-3" data-src="images/hero-3.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-4" data-src="images/hero-4.jpg" alt="" width="1200" height="800"><img class="slide" data-photo="hero-5" data-src="images/hero-5.jpg" alt="" width="1200" height="800"></div>
+      <div class="hero-copy">
+        <p class="greeting" data-site="greeting" data-optional="greeting"></p>
+        <p class="kicker"><span data-site="community">Tapestry</span> &middot; Maintenance portal</p>
+        <h1>Looking after the community&rsquo;s assets</h1>
+        <p class="lead">Report a problem, or open the tools the Maintenance Office uses to plan, track, and complete maintenance work across the community.</p>
+      </div>
+      <span class="photo-cap" aria-hidden="true"></span>
     </div>
-    <div class="door-grid">
-      <a class="door" href="staff.html" data-reveal>
-        <div class="door-photo"><img data-photo="staff" src="images/staff.jpg" alt="" width="1200" height="600" loading="lazy"><span class="pill locked"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Sign-in required</span></div>
-        <div class="door-body">
-          <h3>Staff</h3>
-          <p>Dashboards, surveys, reports and data for general maintenance, housing, and inventory, plus the reference modules.</p>
-          <span class="door-cta">Open staff tools <span class="arrow"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
-        </div>
-      </a>
-      <a class="door" href="community.html" data-reveal>
-        <div class="door-photo"><img data-photo="community" src="images/community.jpg" alt="" width="1200" height="600" loading="lazy"><span class="pill"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg> For everyone</span></div>
-        <div class="door-body">
-          <h3>Community</h3>
-          <p>Something broken, leaking or unsafe? Tell the maintenance team in a few minutes. Add a photo and a location, and staff will review it.</p>
-          <span class="door-cta">Report a problem <span class="arrow"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
-        </div>
-      </a>
+    <div class="hero-tiles">
+      <a class="hero-tile primary" href="community.html"><span class="tile-ic"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 4.5a2 2 0 0 1 3.4 0l8 14A2 2 0 0 1 20 21.5H4a2 2 0 0 1-1.7-3z"/><path d="M12 10v4.5M12 17.5v.01"/></svg></span><h2>Report a problem</h2><p>Open to everyone, no sign-in needed.</p><span class="tile-go">Start a report <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="hero-tile" href="staff.html"><span class="tile-ic"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h2>Staff tools</h2><p>Dashboards, surveys, and records.</p><span class="tile-go">Sign in <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="hero-tile" href="community.html#how"><span class="tile-ic"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.3A4.5 4.5 0 0 1 21 18.5"/></svg></span><h2>For the community</h2><p>What happens after you report.</p><span class="tile-go">Learn more <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
+    <div class="tip-strip ticker"><span class="ticker-label"><svg class="icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg><span class="lbl">Safety tip</span></span><span class="ticker-text"></span><button class="ticker-pause" type="button"></button></div>
   </div>
 </section>
 <section class="section contact-section">
@@ -127,6 +104,6 @@
     <span>Last updated <span data-site="lastUpdated">2026</span></span>
   </div>
 </footer>
-<script src="js/main.js?v=13"></script>
+<script src="js/main.js?v=14"></script>
 </body>
 </html>

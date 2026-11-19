@@ -7,7 +7,8 @@ window.SITE = {
   // Names
   nation: "Tapestry Research Group",                       // e.g. "Example First Nation"
   community: "Tapestry",                 // e.g. the village or reserve name
-  siteName: "Maintenance Management",            // shown after the community name
+  siteName: "Maintenance Management",            // product name, shown large in the header
+  byline: "by Tapestry Research Group",          // small line under the product name in the header
 
   // BRAND COLOURS: pick two colours from the Nation's logo and the whole site follows.
   // primary = dark colour for buttons, header text and footer (keep it dark)
@@ -15,7 +16,9 @@ window.SITE = {
   // Lighter and darker shades are worked out automatically, and text is kept readable.
   brand: {
     primary: "#2b2e3c",
-    accent: "#6fc27d",
+    accent: "#1d6b2e",   // dark logo green: buttons, links, icons, and the "Report a problem" tile
+    wash: "#6fc27d",     // light logo green: the colour faded over the banner photos
+    light: "#6fc27d",    // light logo green: labels on dark backgrounds and the current-page marker
     // Extras taken from the logo:
     // warm  = second highlight for small labels (kept readable on white automatically)
     // weave = colours for the thin striped bar under the hero, footer and poster header ("" turns it off)
@@ -38,9 +41,9 @@ window.SITE = {
   demoBar: {
     text: "You're viewing a sample portal built by Tapestry Research Group. All data is fictional.",
     backLabel: "Back to Tapestry",
-    backUrl: "https://tapestry.jamesspooner.org/services.html",
+    backUrl: "https://pending.tapestryresearchgroup.ca/services.html",
     walkthroughLabel: "Book a walkthrough",
-    walkthroughUrl: "https://tapestry.jamesspooner.org/contact.html"
+    walkthroughUrl: "https://pending.tapestryresearchgroup.ca/contact.html"
   },
   // In demo mode this replaces the sign-in note on the Staff page.
   demoSigninNote: "This is a demo with sample data. Some tools may ask you to sign in. If you can't get in, book a walkthrough and we'll show you around.",
